@@ -7,7 +7,7 @@ resource "aws_db_instance" "db" {
   name                   = "db"
   username               = "${var.db_username}"
   password               = "${var.db_password}"
-  vpc_security_group_ids = "${var.vpc_security_group_ids}"
+  vpc_security_group_ids = []
 
   tags {
     Name        = "${var.tag_name}"

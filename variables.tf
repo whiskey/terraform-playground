@@ -18,8 +18,3 @@ variable "db_username" {
 variable "db_password" {
   description = "db root password"
 }
-
-variable "vpc_security_group_ids" {
-  type        = "list"
-  description = "db vpc security groups"
-}

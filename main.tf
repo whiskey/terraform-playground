@@ -16,3 +16,11 @@ module "networking" {
   vpc_cidr = "${var.vpc_cidr}"
 }
 
+module "database" {
+  source = "./modules/database"
+
+  db_username = "${var.db_username}"
+  db_password = "${var.db_password}"
+
+  #vpc_security_group_ids = []
+}
