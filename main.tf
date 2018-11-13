@@ -8,10 +8,10 @@ provider "aws" {
 
 module "networking" {
   source = "./modules/networking"
-  
+
   vpc_cidr = "${var.vpc_cidr}"
 }
 
-output "out_vpc_id" {
+output "vpc_id" {
   value = "${module.networking.vpc_id}"
 }

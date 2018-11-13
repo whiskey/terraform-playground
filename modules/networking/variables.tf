@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-    default = "0.0.0.0/0"
+  default = "0.0.0.0/0"
 }
 
 variable "tag_name" {
