@@ -16,6 +16,3 @@ module "networking" {
   vpc_cidr = "${var.vpc_cidr}"
 }
 
-output "vpc_id" {
-  value = "${module.networking.vpc_id}"
-}
