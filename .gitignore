@@ -3,5 +3,7 @@
 *.backup
 ./*.tfstate
 
+backend_config
+
 .DS_Store
 .vscode
