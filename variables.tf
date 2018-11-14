@@ -10,6 +10,9 @@ variable "aws_region" {
 ### Networking
 variable "vpc_cidr" {}
 
+variable "vpc_public_subnet_cidr" {}
+variable "vpc_private_subnet_cidr" {}
+
 ### Database
 variable "db_username" {
   description = "db root user"
