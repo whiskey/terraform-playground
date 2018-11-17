@@ -1,7 +1,9 @@
 # VPC
 
 resource "aws_vpc" "vpc" {
-  cidr_block = "${var.vpc_cidr}"
+  cidr_block           = "${var.vpc_cidr}"
+  enable_dns_support   = "true"
+  enable_dns_hostnames = "true"
 
   tags {
     Name        = "${var.tag_name}-main"
@@ -14,6 +16,7 @@ resource "aws_subnet" "main-public" {
   cidr_block              = "${var.vpc_public_subnet_cidr}"
   vpc_id                  = "${aws_vpc.vpc.id}"
   map_public_ip_on_launch = "true"
+  availability_zone       = "${var.vpc_public_subnet_az}"
 
   tags {
     Name = "${var.tag_name}-public"
@@ -24,6 +27,7 @@ resource "aws_subnet" "main-private" {
   cidr_block              = "${var.vpc_private_subnet_cidr}"
   vpc_id                  = "${aws_vpc.vpc.id}"
   map_public_ip_on_launch = "false"
+  availability_zone       = "${var.vpc_private_subnet_az}"
 
   tags {
     Name = "${var.tag_name}-private"

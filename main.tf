@@ -13,7 +13,11 @@ terraform {
 module "networking" {
   source = "./modules/networking"
 
-  vpc_cidr = "${var.vpc_cidr}"
+  vpc_cidr                = "${var.vpc_cidr}"
+  vpc_public_subnet_cidr  = "${var.vpc_public_subnet_cidr}"
+  vpc_private_subnet_cidr = "${var.vpc_private_subnet_cidr}"
+  vpc_public_subnet_az    = "${var.vpc_public_subnet_az}"
+  vpc_private_subnet_az   = "${var.vpc_private_subnet_az}"
 }
 
 module "database" {
@@ -23,4 +27,5 @@ module "database" {
   db_password = "${var.db_password}"
 
   #vpc_security_group_ids = []
+  db_subnet_ids = ["${module.networking.vpc_subnet_ids}"]
 }

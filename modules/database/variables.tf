@@ -31,6 +31,10 @@ variable "db_password" {
   description = "root password"
 }
 
+variable "db_subnet_ids" {
+  type = "list"
+}
+
 ## Tags
 
 variable "tag_name" {
