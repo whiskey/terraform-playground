@@ -14,6 +14,7 @@ It's recommended to use an init file for the current S3 backend: `terraform init
 * Simple setup; has rough edges!
 * Variables are handled locally, no centralized configuration management such as _Vault_ is used.
 * Currently no testing in place
+* [Issues](https://github.com/terraform-providers/terraform-provider-aws/issues/2468#issuecomment-352728235) with RDS updates
 
 ## Alternatives to current implementation
 
