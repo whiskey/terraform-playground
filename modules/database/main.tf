@@ -12,7 +12,7 @@ resource "aws_db_instance" "db" {
   db_subnet_group_name = "${aws_db_subnet_group.main_subnet_grp.name}"
 
   final_snapshot_identifier = "main-db-final"
-  skip_final_snapshot = "true"
+  skip_final_snapshot       = "true"
 
   tags {
     Name        = "${var.tag_name}"
