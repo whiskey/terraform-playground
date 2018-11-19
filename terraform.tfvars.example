@@ -1,0 +1,17 @@
+# Variables
+
+## Provider
+aws_credentials_file = ""
+aws_profile = ""
+
+## networking
+vpc_cidr = ""
+vpc_public_subnet_cidr = ""
+vpc_private_subnet_cidr = ""
+
+## database
+db_username = ""
+db_password = ""
+
+## compute
+web_key_name = ""
