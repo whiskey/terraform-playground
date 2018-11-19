@@ -43,5 +43,10 @@ module "compute" {
 
   web_subnet_id              = "${module.networking.vpc_public_subnet_id}"
   web_vpc_security_group_ids = "${module.networking.vpc_sg_ids}"
-  web_key_name               = "${var.web_key_name}"
+  web_key_name               = "${aws_key_pair.demo-key.key_name}"
+}
+
+resource "aws_key_pair" "demo-key" {
+  key_name   = "demo-key"
+  public_key = "${file("${var.ssh_public}")}"
 }

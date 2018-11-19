@@ -4,6 +4,9 @@
 aws_credentials_file = ""
 aws_profile = ""
 
+ssh_public = ""
+ssh_private = ""
+
 ## networking
 vpc_cidr = ""
 vpc_public_subnet_cidr = ""
@@ -14,4 +17,3 @@ db_username = ""
 db_password = ""
 
 ## compute
-web_key_name = ""

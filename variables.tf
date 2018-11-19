@@ -47,4 +47,10 @@ variable "web_instance_type" {
   default = "t2.micro"
 }
 
-variable "web_key_name" {}
+variable "ssh_public" {
+  description = "path to the public ssh key"
+}
+
+variable "ssh_private" {
+  description = "path to the private ssh key"
+}
