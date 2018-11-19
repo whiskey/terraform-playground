@@ -1,6 +1,6 @@
 resource "aws_security_group" "web_access" {
   name        = "sg_web_access"
-  description = "Very simple security group to allow HTTP & HTTPS access as well as SSH."
+  description = "Very simple security group to allow HTTP & HTTPS access."
 
   vpc_id = "${aws_vpc.vpc.id}"
 
@@ -17,8 +17,14 @@ resource "aws_security_group" "web_access" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
 
-  # TODO: consider a bastion host or other ways to remove this rule!
+resource "aws_security_group" "ssh_access" {
+  name        = "sg_ssh_access"
+  description = "Security group to allow SSH access."
+
+  vpc_id = "${aws_vpc.vpc.id}"
+
   ingress {
     from_port   = 22
     to_port     = 22

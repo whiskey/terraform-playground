@@ -42,7 +42,7 @@ module "compute" {
   web_ami = "${lookup(var.amis, var.aws_region)}"
 
   web_subnet_id              = "${module.networking.vpc_public_subnet_id}"
-  web_vpc_security_group_ids = "${module.networking.vpc_sg_ids}"
+  web_vpc_security_group_ids = ["${module.networking.vpc_sg_ssh_access}"]
   web_key_name               = "${aws_key_pair.demo-key.key_name}"
 }
 
