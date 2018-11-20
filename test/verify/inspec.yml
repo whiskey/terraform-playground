@@ -1,0 +1,9 @@
+name: verify
+title: InSpec Playground Profile
+maintainer: Carsten Knoblich
+copyright: Carsten Knoblich
+copyright_email: hello@staticline.de
+summary: An InSpec Compliance Profile
+version: 0.1.0
+supports:
+  platform: aws

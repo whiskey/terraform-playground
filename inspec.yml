@@ -1,0 +1,7 @@
+supports:
+  - inspec: '~> 1.0'
+  - platform: aws
+depends:
+  - name: ec2-instance-profile
+    git: https://github.com/alexpop/ec2-instance-profile
+    version: '~> 0.1'
