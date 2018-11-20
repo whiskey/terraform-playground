@@ -7,7 +7,11 @@ This is just a playground to try out certain Terraform resources and pack them i
 
 ## Initial setup
 
-It's recommended to use an init file for the current S3 backend: `terraform init -backend-config=backend_config`.  
+It's recommended to use an init file for the current S3 backend: `terraform init -backend-config=backend_config`.
+
+## Testing
+
+`inspec exec test/verify -t aws://<aws_region>/<aws_profile>`  
 
 ## Caveats
 

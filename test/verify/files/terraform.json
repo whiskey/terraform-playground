@@ -1,1 +1,37 @@
-{}
+{
+    "db_address": {
+        "sensitive": false,
+        "type": "string",
+        "value": "terraform-20181120184711050700000002.chg4zowgaw47.eu-west-1.rds.amazonaws.com"
+    },
+    "db_engine": {
+        "sensitive": false,
+        "type": "string",
+        "value": "postgres"
+    },
+    "db_engine_version": {
+        "sensitive": false,
+        "type": "string",
+        "value": "10.4"
+    },
+    "db_status": {
+        "sensitive": false,
+        "type": "string",
+        "value": "available"
+    },
+    "ec2_id": {
+        "sensitive": false,
+        "type": "string",
+        "value": "i-0fd5b910c14b54909"
+    },
+    "ec2_public_ip": {
+        "sensitive": false,
+        "type": "string",
+        "value": "52.210.182.161"
+    },
+    "vpc_id": {
+        "sensitive": false,
+        "type": "string",
+        "value": "vpc-04af152610b6fe729"
+    }
+}
