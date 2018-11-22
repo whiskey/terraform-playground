@@ -2,7 +2,7 @@
     "db_address": {
         "sensitive": false,
         "type": "string",
-        "value": "terraform-20181120184711050700000002.chg4zowgaw47.eu-west-1.rds.amazonaws.com"
+        "value": "terraform-20181122074450631500000002.chg4zowgaw47.eu-west-1.rds.amazonaws.com"
     },
     "db_engine": {
         "sensitive": false,
@@ -22,16 +22,26 @@
     "ec2_id": {
         "sensitive": false,
         "type": "string",
-        "value": "i-0fd5b910c14b54909"
+        "value": "i-066ae02e25b47b39f"
     },
     "ec2_public_ip": {
         "sensitive": false,
         "type": "string",
-        "value": "52.210.182.161"
+        "value": "34.255.8.169"
     },
     "vpc_id": {
         "sensitive": false,
         "type": "string",
-        "value": "vpc-04af152610b6fe729"
+        "value": "vpc-073240631a9f05dfd"
+    },
+    "vpc_private_subnet_id": {
+        "sensitive": false,
+        "type": "string",
+        "value": "subnet-0c48b197c55791a76}"
+    },
+    "vpc_public_subnet_id": {
+        "sensitive": false,
+        "type": "string",
+        "value": "subnet-009299b30198fc3be}"
     }
 }

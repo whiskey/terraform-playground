@@ -5,6 +5,14 @@ output "vpc_id" {
   value = "${module.networking.vpc_id}"
 }
 
+output "vpc_public_subnet_id" {
+  value = "${module.networking.vpc_public_subnet_id}"
+}
+
+output "vpc_private_subnet_id" {
+  value = "${module.networking.vpc_private_subnet_id}"
+}
+
 ## Compute
 output "ec2_id" {
   value = "${module.compute.ec2_id}"
