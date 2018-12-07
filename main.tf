@@ -41,9 +41,16 @@ module "compute" {
 
   web_ami = "${lookup(var.amis, var.aws_region)}"
 
-  web_subnet_id              = "${module.networking.vpc_public_subnet_id}"
-  web_vpc_security_group_ids = ["${module.networking.vpc_sg_ssh_access}"]
-  web_key_name               = "${aws_key_pair.demo-key.key_name}"
+  web_subnet_id = "${module.networking.vpc_public_subnet_id}"
+
+  web_vpc_security_group_ids = [
+    "${module.networking.vpc_sg_ssh_access}",
+    "${module.networking.vpc_sg_web_access}",
+  ]
+
+  web_key_name = "${aws_key_pair.demo-key.key_name}"
+
+  web_user_data = "bash <(curl -s https://raw.githubusercontent.com/whiskey/hello-bootstrap/master/bootstrap.sh)"
 }
 
 resource "aws_key_pair" "demo-key" {
