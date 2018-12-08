@@ -33,16 +33,6 @@ variable "db_password" {
 }
 
 ## Compute
-variable "amis" {
-  type = "map"
-
-  default = {
-    us-east-1    = "ami-0ae682b6002e9bfc5"
-    eu-central-1 = "ami-0dfd7cad24d571c54"
-    eu-west-1    = "ami-004702ac36e50e4d9"
-  }
-}
-
 variable "web_instance_type" {
   default = "t2.micro"
 }

@@ -7,4 +7,6 @@ resource "aws_instance" "webserver" {
   subnet_id              = "${var.web_subnet_id}"
   vpc_security_group_ids = ["${var.web_vpc_security_group_ids}"]
   key_name               = "${var.web_key_name}"
+
+  user_data = "${var.web_user_data}"
 }

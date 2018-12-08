@@ -8,6 +8,10 @@ variable "web_instance_type" {
   default = "t2.micro"
 }
 
+variable "web_user_data" {
+  default = ""
+}
+
 variable "web_subnet_id" {
   default = "change me"
 }
